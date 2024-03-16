@@ -1,4 +1,5 @@
 # Test Automation Framework for Automation Exercise Demo Project
+[![E2E Regression Testing](https://github.com/Ashraaf7/AutomationExercisePracticing/actions/workflows/E2E%20Regression%20Testing.yml/badge.svg)](https://github.com/Ashraaf7/AutomationExercisePracticing/actions/workflows/E2E%20Regression%20Testing.yml)
 
 ### Website :
 

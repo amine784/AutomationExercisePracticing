@@ -17,6 +17,9 @@
         <slf4jVersion>2.0.12</slf4jVersion>
         <slf4jVersionAPI>2.0.12</slf4jVersionAPI>
         <log4jVersion>2.22.1</log4jVersion>
+        <gsonVersion>2.10.1</gsonVersion>
+        <commonIO>2.15.0</commonIO>
+        <apachePoi>5.2.2</apachePoi>
     </properties>
 
     <build>
@@ -57,5 +60,22 @@
             <version>${slf4jVersion}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${apachePoi}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commonIO}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gsonVersion}</version>
+        </dependency>
+
     </dependencies>
 </project>

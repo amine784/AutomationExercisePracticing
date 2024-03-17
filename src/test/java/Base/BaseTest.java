@@ -2,30 +2,21 @@ package Base;
 
 import com.automationexercise.Pages.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
 
-import java.io.File;
-import java.io.IOException;
-
 public class BaseTest {
 
     public static final String BASE_URL = "https://automationexercise.com/";
-    public WebDriver driver;
+    protected WebDriver driver;
     protected SoftAssert soft;
     public HomePage homePage;
 
     @BeforeTest
-    public void setUp()  {
+    public void setUp() {
         WebDriverManager.edgedriver().setup();
         WebDriver driver = new EdgeDriver();
         System.setProperty("webdriver.http.factory", "jdk-http-client");
@@ -38,6 +29,7 @@ public class BaseTest {
 
     @AfterTest
     public void tearDown() {
+        driver.quit();
         driver.close();
     }
 

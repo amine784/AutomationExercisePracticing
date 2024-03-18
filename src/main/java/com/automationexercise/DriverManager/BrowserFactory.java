@@ -1,4 +1,4 @@
-package com.acuanix.geo.DriverUtils;
+package com.automationexercise.DriverManager;
 
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;

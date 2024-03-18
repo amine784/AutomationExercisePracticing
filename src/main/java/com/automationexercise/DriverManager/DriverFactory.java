@@ -1,8 +1,8 @@
-package com.acuanix.geo.DriverUtils;
+package com.automationexercise.DriverManager;
 
 import org.openqa.selenium.WebDriver;
 
-import static com.acuanix.geo.DriverUtils.DriverManager.setDriver;
+import static com.automationexercise.DriverManager.DriverManager.setDriver;
 
 public class DriverFactory {
 

@@ -42,6 +42,7 @@
             <version>${testNGVersion}</version>
             <scope>test</scope>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -93,6 +94,7 @@
                     <artifactId>selenium-java</artifactId>
                 </exclusion>
             </exclusions>
+
         </dependency>
     </dependencies>
 </project>

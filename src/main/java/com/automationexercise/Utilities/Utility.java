@@ -189,4 +189,15 @@ public class Utility {
         getDriver().navigate().refresh();
         LogUtils.info("Reloaded page " + getDriver().getCurrentUrl());
     }
+
+    /**
+     * Navigate to the specified URL.
+     *
+     * @param URL the specified url
+     */
+    public static void openWebsite(String URL) {
+        getDriver().get(URL);
+        implicitlyWait();
+        LogUtils.info("Open website with URL: " + URL);
+    }
 }

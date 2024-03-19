@@ -1,23 +1,25 @@
 package com.automationexercise.Pages;
 
+import com.automationexercise.Utilities.Utility;
+import com.automationexercise.Utilities.WaitsUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class HomePage extends BasePage {
+import javax.swing.text.Utilities;
+
+public class HomePage {
 
 
-    public HomePage(WebDriver driver) {
-        super(driver);
-    }
+    private final WebDriver driver;
 
     By ProductButton = By.xpath("//a[@href=\"/products\"]");
 
-
-    public String VerifyHomePageVisible() {
-        return driver.getCurrentUrl();
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
     }
 
+    //Actions
     public String ADS() {
         WebElement ad = driver.findElement(
                 By.xpath("//span[@dir=\"auto\" and contains(text(),\"Close\")]"));
@@ -26,18 +28,22 @@ public class HomePage extends BasePage {
 
         if (ad.isDisplayed())
             ad.click();
-        else if(ad2.isDisplayed()){
+        else if (ad2.isDisplayed()) {
             ad2.click();
-        }
-        else{
+        } else {
             System.out.println("No ads appeared");
         }
         return "Ads Closed";
     }
 
     public SearchProductPage PressProductsButton() {
-        WaitTillVisibleAndClick(ProductButton);
+        WaitsUtils.explicitlyWaitForClickability(driver, ProductButton);
         return new SearchProductPage(driver);
+    }
+
+    // Verify
+    public String VerifyHomePageVisible() {
+        return driver.getCurrentUrl();
     }
 
 

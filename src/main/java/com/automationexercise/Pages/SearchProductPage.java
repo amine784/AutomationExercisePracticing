@@ -31,7 +31,7 @@ public class SearchProductPage {
             (By.xpath("//div[@id=\"cartModal\"]//following::div[@class=\"col-sm-4\"]"));
 
 
-    //Actions
+
 
     public void EnterProduct(String product) {
         explicitlyWaitForVisibility(driver, SearchField);

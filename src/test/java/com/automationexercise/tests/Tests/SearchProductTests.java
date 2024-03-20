@@ -5,6 +5,7 @@ import com.automationexercise.DriverManager.DriverManager;
 import com.automationexercise.Pages.HomePage;
 import com.automationexercise.Pages.SearchProductPage;
 import com.automationexercise.Utilities.DataUtils;
+import com.automationexercise.Utilities.LogUtils;
 import com.automationexercise.Utilities.Utility;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -30,8 +31,7 @@ public class SearchProductTests {
     @Test
     public void userSearchForProduct() {
         // navigate to the products page
-        new HomePage(getDriver()).PressProductsButton();
-
+        new HomePage(getDriver()).pressProductsButton();
         // verify that the user is navigated to the all products page
         Assert.assertTrue(new SearchProductPage(getDriver()).VerifyUserNavigatedToAllProductsPage());
 

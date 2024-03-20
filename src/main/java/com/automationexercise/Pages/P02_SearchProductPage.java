@@ -1,10 +1,8 @@
 package com.automationexercise.Pages;
 
-import com.automationexercise.Utilities.WaitsUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
@@ -13,24 +11,23 @@ import static com.automationexercise.Utilities.Utility.clicking;
 import static com.automationexercise.Utilities.Utility.sendData;
 import static com.automationexercise.Utilities.WaitsUtils.explicitlyWaitForVisibility;
 
-public class SearchProductPage {
+public class P02_SearchProductPage {
     private final WebDriver driver;
 
-    public SearchProductPage(WebDriver driver) {
+    public P02_SearchProductPage(WebDriver driver) {
         this.driver = driver;
     }
 
 
     WebElement AllProductsPage = getDriver().findElement
-            (By.xpath("//h2[@class=\"title text-center\" and contains(text(), 'All Products')]"));
+            (By.cssSelector("div[class=\"features_items\"]>h2"));
+    By AllProductPage = By.cssSelector("div[class=\"features_items\"]>h2");
     By SearchField = By.xpath("//input[@id=\"search_product\"]");
-    By SearchButton = By.xpath("//button[@id=\"submit_search\"]");
+    By SearchButton = By.cssSelector("button[id=\"submit_search\"]");
     WebElement SearchedSection = getDriver().findElement
             (By.xpath("//h2[@class=\"title text-center\" and contains(text(), 'Searched Products')]"));
     List<WebElement> SearchResults = getDriver().findElements
             (By.xpath("//div[@id=\"cartModal\"]//following::div[@class=\"col-sm-4\"]"));
-
-
 
 
     public void EnterProduct(String product) {
@@ -45,7 +42,7 @@ public class SearchProductPage {
     //Verify
 
     public Boolean VerifyUserNavigatedToAllProductsPage() {
-        explicitlyWaitForVisibility(driver, (By) AllProductsPage);
+        explicitlyWaitForVisibility(driver, AllProductPage);
         return AllProductsPage.isDisplayed();
     }
 

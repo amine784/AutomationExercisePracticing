@@ -98,7 +98,7 @@
             </exclusions>
 
         </dependency>
-=======
+
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
@@ -112,6 +112,5 @@
             <version>4.18.1</version>
         </dependency>
 
->>>>>>> TC9_SearchProduct
     </dependencies>
 </project>

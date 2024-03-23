@@ -11,7 +11,7 @@ import static com.automationexercise.DriverManager.DriverManager.getDriver;
 import static com.automationexercise.Utilities.DataUtils.getJsonData;
 import static com.automationexercise.Utilities.Utility.*;
 
-public  class TC05_RegisterUserwithexistingemailTest
+public  class TC05_Register_User_with_existing_email_Test
 {
     private final String name=getJsonData("signup_with_exist_email","name");
     private final String email=getJsonData("signup_with_exist_email","email");

@@ -74,13 +74,7 @@ public enum BrowserFactory {
             options.setExperimentalOption("prefs", prefs);
             options.addArguments("--start-maximized");
             options.addArguments("--disable-extensions");
-            options.addArguments("--disable-infobars");
-            options.addArguments("--disable-notifications");
-            options.addArguments("--remote-allow-origins=*");
-            options.addArguments("--remote-debugging-pipe=9222");
-            options.addArguments("--disable-gpu");
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
+      
 
             options.setAcceptInsecureCerts(true);
 

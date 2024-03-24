@@ -77,7 +77,8 @@ public enum BrowserFactory {
             options.addArguments("--disable-infobars");
             options.addArguments("--disable-notifications");
             options.addArguments("--remote-allow-origins=*");
-            options.addArguments("--remote-debugging-pipe");
+            options.addArguments("--remote-debugging-pipe=9222");
+            options.addArguments("--disable-gpu");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
 

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 import static com.automationexercise.Utilities.Utility.*;
 
-public class P02_RegisterWithExistingEmailPage {
+public class P01_RegisterPage {
 
     //constructor
     private final WebDriver driver;
@@ -17,18 +17,18 @@ public class P02_RegisterWithExistingEmailPage {
     private final By newUserSignupMessage = By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/h2");
     private final By errorMsg = By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/p");
 
-    public P02_RegisterWithExistingEmailPage(WebDriver driver) {
+    public P01_RegisterPage(WebDriver driver) {
         this.driver = driver;
     }
 
     //Action
-    public P02_RegisterWithExistingEmailPage clickOnSignupLoginButton() {
+    public P01_RegisterPage clickOnSignupLoginButton() {
         clicking(driver, signupLoginButton);
         return this;
     }
 
 
-    public P02_RegisterWithExistingEmailPage enterSignupInfo(String nameParam, String emailParam) {
+    public P01_RegisterPage enterSignupInfo(String nameParam, String emailParam) {
         sendData(driver, this.name, nameParam);
         LogUtils.info("Name: " + nameParam);
         sendData(driver, this.email, emailParam);
@@ -36,7 +36,7 @@ public class P02_RegisterWithExistingEmailPage {
         return this;
     }
 
-    public P02_RegisterWithExistingEmailPage clickOnSignupButton() {
+    public P01_RegisterPage clickOnSignupButton() {
         clicking(driver, signupButton);
         return this;
     }

@@ -2,7 +2,7 @@ package com.automationexercise.tests.Tests;
 
 import com.automationexercise.DriverManager.DriverFactory;
 import com.automationexercise.DriverManager.DriverManager;
-import com.automationexercise.Pages.P02_RegisterWithExistingEmailPage;
+import com.automationexercise.Pages.P01_RegisterPage;
 import com.automationexercise.Utilities.Utility;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -30,17 +30,17 @@ public class TC05_RegisterWithExistingEmailTest {
     public void navigate_to_signup_page() {
         Assert.assertTrue(VerifyURL(getDriver(), getEnvironmentPropertyValue("BASE_URL")));
 
-        new P02_RegisterWithExistingEmailPage(getDriver())
+        new P01_RegisterPage(getDriver())
                 .clickOnSignupLoginButton();
 
-        Assert.assertTrue(new P02_RegisterWithExistingEmailPage(getDriver())
+        Assert.assertTrue(new P01_RegisterPage(getDriver())
                 .verifyThatNewUserSignupAppears(SIGNUP_MSG));
 
-        new P02_RegisterWithExistingEmailPage(getDriver())
+        new P01_RegisterPage(getDriver())
                 .enterSignupInfo(NAME, EMAIL)
                 .clickOnSignupButton();
 
-        Assert.assertTrue(new P02_RegisterWithExistingEmailPage(getDriver())
+        Assert.assertTrue(new P01_RegisterPage(getDriver())
                 .verifyThatErrorMessageAppears(ERROR_MSG));
 
     }

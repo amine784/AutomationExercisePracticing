@@ -36,6 +36,7 @@ public enum BrowserFactory {
             options.addArguments("--disable-infobars");
             options.addArguments("--disable-notifications");
             options.addArguments("--remote-allow-origins=*");
+            options.addArguments("--remote-debugging-pipe");
 
             options.setAcceptInsecureCerts(true);
 
@@ -51,6 +52,7 @@ public enum BrowserFactory {
         public FirefoxOptions getOptions() {
             FirefoxOptions options = new FirefoxOptions();
             options.addArguments("--start-maximized");
+            options.addArguments("--remote-debugging-pipe");
             options.setAcceptInsecureCerts(true);
 
             return options;
@@ -75,6 +77,7 @@ public enum BrowserFactory {
             options.addArguments("--disable-infobars");
             options.addArguments("--disable-notifications");
             options.addArguments("--remote-allow-origins=*");
+            options.addArguments("--remote-debugging-pipe");
 
             options.setAcceptInsecureCerts(true);
 

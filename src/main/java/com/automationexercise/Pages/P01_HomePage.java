@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import static com.automationexercise.Utilities.Utility.clicking;
+import static com.automationexercise.Utilities.Utility.*;
 
 public class P01_HomePage {
 
@@ -17,7 +17,6 @@ public class P01_HomePage {
     public P01_HomePage(WebDriver driver) {
         this.driver = driver;
     }
-
 
     public void ADS() {
         try {
@@ -36,7 +35,6 @@ public class P01_HomePage {
         }
     }
 
-
     /**
      * This method is used to click on the products button on the home page
      */
@@ -44,5 +42,33 @@ public class P01_HomePage {
         clicking(driver, ProductButton);
         LogUtils.info("Clicked on product button");
         return new P02_SearchProductPage(driver);
+    }
+
+    //  Test Case 25: Verify Scroll Up using 'Arrow' button and Scroll Down functionality
+    private final By SubscriptionText = By.cssSelector("//h2[contains(text(),'Subscription')]");
+    private final By ScrollUpButton = By.cssSelector("[id=\"scrollUp\"]");
+    private final By HeaderText = By.cssSelector("//h2[contains(text(),'Full-Fledged')]\n");
+
+    public P01_HomePage scrollToBottom() {
+        scrollToElementAtBottom(driver, SubscriptionText);
+        return this;
+    }
+
+    public P01_HomePage VerifyScrollDown() {
+        verifyElementVisible(SubscriptionText);
+        LogUtils.info("SubscriptionText:" + getText(driver, SubscriptionText));
+        return this;
+    }
+
+    public P01_HomePage pressScrollUpButton() {
+        clicking(driver, ScrollUpButton);
+        return this;
+    }
+
+    public P01_HomePage VerifyScrollUp() {
+        verifyElementVisible(HeaderText);
+        LogUtils.info("HeaderText:" + getText(driver, HeaderText));
+
+        return this;
     }
 }

@@ -26,12 +26,14 @@ public class P02_SearchProductPage {
             (By.xpath("//div[@id=\"cartModal\"]//following::div[@class=\"col-sm-4\"]"));
 
 
-    public void EnterProduct(String product) {
+    public P02_SearchProductPage EnterProduct(String product) {
         sendData(driver, SearchField, product);
+        return this;
     }
 
-    public void PressSearchButton() {
+    public P02_SearchProductPage PressSearchButton() {
         clicking(driver, SearchButton);
+        return this;
     }
 
     //Verify

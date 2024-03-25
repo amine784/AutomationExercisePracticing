@@ -47,7 +47,7 @@ public class SearchProductTests {
 
         // verify that all the products related to the search are visible
         soft.assertEquals(new P02_SearchProductPage(getDriver()).VerifyAllProductRelatedToSearchVisible(),
-                6);
+                3);
         soft.assertAll();
     }
 

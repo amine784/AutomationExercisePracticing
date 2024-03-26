@@ -36,7 +36,7 @@ public class P02_SearchProductPage {
         return this;
     }
 
-    //Verify
+    
     public Boolean VerifyUserNavigatedToAllProductsPage() {
         return verifyElementVisible(AllProductPage);
     }

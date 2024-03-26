@@ -37,15 +37,25 @@ public class ScrollTests {
     @Test
     public void verifyScrollDown() {
         new P01_HomePage(getDriver()).scrollToBottom();
-        new P01_HomePage(getDriver()).VerifyScrollDown();
+        new P01_HomePage(getDriver()).verifyScrollDown();
     }
 
     @Test
     public void verifyScrollUp() {
         new P01_HomePage(getDriver()).scrollToBottom().
-                pressScrollUpButton().VerifyScrollUp();
+                pressScrollUpButton().verifyScrollUp();
 
 
+    }
+
+    //Test Case 26: Verify Scroll Up without 'Arrow' button and Scroll Down functionality
+    @Test
+    public void ScrollWithOutArrowButton() {
+        new P01_HomePage(getDriver()).
+                scrollToBottom().
+                verifyScrollDown().
+                scrollToUpWithOutArrowButton().
+                verifyScrollUp();
     }
 
     @AfterMethod

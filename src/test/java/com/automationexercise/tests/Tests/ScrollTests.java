@@ -8,13 +8,11 @@ import com.automationexercise.Utilities.Utility;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import static com.automationexercise.DriverManager.DriverManager.getDriver;
 import static com.automationexercise.Utilities.Utility.VerifyURL;
 
 public class ScrollTests {
-    SoftAssert soft = new SoftAssert();
 
     /*
 1. Launch browser
@@ -38,13 +36,15 @@ public class ScrollTests {
 
     @Test
     public void verifyScrollDown() {
+        new P01_HomePage(getDriver()).scrollToBottom();
         new P01_HomePage(getDriver()).VerifyScrollDown();
-
     }
 
     @Test
     public void verifyScrollUp() {
-        new P01_HomePage(getDriver()).VerifyScrollUp();
+        new P01_HomePage(getDriver()).scrollToBottom().
+                pressScrollUpButton().VerifyScrollUp();
+
 
     }
 

@@ -45,9 +45,9 @@ public class P01_HomePage {
     }
 
     //  Test Case 25: Verify Scroll Up using 'Arrow' button and Scroll Down functionality
-    private final By SubscriptionText = By.cssSelector("//h2[contains(text(),'Subscription')]");
+    private final By SubscriptionText = By.xpath("//h2[contains(text(),'Subscription')]");
     private final By ScrollUpButton = By.cssSelector("[id=\"scrollUp\"]");
-    private final By HeaderText = By.cssSelector("//h2[contains(text(),'Full-Fledged')]\n");
+    private final By HeaderText = By.cssSelector("div[class='item active'] div[class='col-sm-6'] h2");
 
     public P01_HomePage scrollToBottom() {
         scrollToElementAtBottom(driver, SubscriptionText);

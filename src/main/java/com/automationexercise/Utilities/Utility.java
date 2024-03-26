@@ -205,4 +205,9 @@ public class Utility {
         implicitlyWait();
         LogUtils.info("Open website with URL: " + URL);
     }
+
+    //Added By Amine
+    public static String verifyTextAccountCreated(By locator) {
+        return getText(getDriver(), locator);
+    }
 }

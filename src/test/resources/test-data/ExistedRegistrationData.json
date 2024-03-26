@@ -2,5 +2,22 @@
   "name": "radwa",
   "email": "wa.nagib86@gmail.com",
   "message": "New User Signup!",
-  "error message": "Email Address already exist!"
+  "error message": "Email Address already exist!",
+  "emailTimestamp": "testEmail_",
+  "fullNameRegister": "Amine BC",
+  "password": "Ashraf",
+  "errorMessage": "Your email or password is incorrect!",
+  "daysSelect" : "12",
+  "monthsSelect" : "January",
+  "yearsSelect" : "1980",
+  "firstNameInput": "amine",
+  "lastNameInput" : "bcf",
+  "companyNameInputFeald" : "code cooperation",
+  "addressOneInput" : "address one input form",
+  "addresstWOInput" : "addresstWOInputtt",
+  "countrySelect" : "Canada",
+  "stateInput" : "state input text",
+  "cityInput"  : "city input one col",
+  "zipcodeInput" : "zip code 8000",
+  "mobileNumberInput" : "+21620789093"
 }

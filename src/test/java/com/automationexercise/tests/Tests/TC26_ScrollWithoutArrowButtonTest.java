@@ -2,7 +2,7 @@ package com.automationexercise.tests.Tests;
 
 import com.automationexercise.DriverManager.DriverFactory;
 import com.automationexercise.DriverManager.DriverManager;
-import com.automationexercise.Pages.P01_HomePage;
+import com.automationexercise.Pages.P02_HomePage;
 import com.automationexercise.Utilities.DataUtils;
 import com.automationexercise.Utilities.Utility;
 import org.testng.annotations.AfterMethod;
@@ -10,9 +10,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static com.automationexercise.DriverManager.DriverManager.getDriver;
-import static com.automationexercise.Utilities.Utility.VerifyURL;
 
-public class ScrollTests {
+public class TC26_ScrollWithoutArrowButtonTest {
 
     /*
 1. Launch browser
@@ -29,20 +28,16 @@ public class ScrollTests {
         Utility.openWebsite(DataUtils.getEnvironmentPropertyValue("BASE_URL"));
     }
 
-    @Test
-    public void verifyHomePage() {
-        VerifyURL(getDriver(), DataUtils.getEnvironmentPropertyValue("BASE_URL"));
-    }
 
     @Test
     public void verifyScrollDown() {
-        new P01_HomePage(getDriver()).scrollToBottom();
-        new P01_HomePage(getDriver()).verifyScrollDown();
+        new P02_HomePage(getDriver()).scrollToBottom();
+        new P02_HomePage(getDriver()).verifyScrollDown();
     }
 
     @Test
     public void verifyScrollUp() {
-        new P01_HomePage(getDriver()).scrollToBottom().
+        new P02_HomePage(getDriver()).scrollToBottom().
                 pressScrollUpButton().verifyScrollUp();
 
 
@@ -50,8 +45,8 @@ public class ScrollTests {
 
     //Test Case 26: Verify Scroll Up without 'Arrow' button and Scroll Down functionality
     @Test
-    public void ScrollWithOutArrowButton() {
-        new P01_HomePage(getDriver()).
+    public void ScrollWithoutArrowButton() {
+        new P02_HomePage(getDriver()).
                 scrollToBottom().
                 verifyScrollDown().
                 scrollToUpWithOutArrowButton().

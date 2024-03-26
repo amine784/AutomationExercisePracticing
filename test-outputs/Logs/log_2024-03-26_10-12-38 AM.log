@@ -2,7 +2,7 @@
 [INFO] 26-03-2024 10:12:38 [main] [com.automationexercise.Utilities.Utility.VerifyURL(Utility.java:135)] - Expected URL: https://automationexercise.com/
 [INFO] 26-03-2024 10:12:43 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:202)] - Open website with URL: https://automationexercise.com/
 [INFO] 26-03-2024 10:12:43 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.xpath: //h2[contains(text(),'Subscription')]
-[INFO] 26-03-2024 10:12:43 [main] [com.automationexercise.Pages.P01_HomePage.VerifyScrollDown(P01_HomePage.java:59)] - SubscriptionText:SUBSCRIPTION
+[INFO] 26-03-2024 10:12:43 [main] [com.automationexercise.Pages.P02_HomePage.VerifyScrollDown(P01_HomePage.java:59)] - SubscriptionText:SUBSCRIPTION
 [INFO] 26-03-2024 10:12:48 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:202)] - Open website with URL: https://automationexercise.com/
 [ERROR] 26-03-2024 10:12:48 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:86)] - javascript error: {"status":32,"value":"An invalid or illegal selector was specified"}
   (Session info: MicrosoftEdge=123.0.2420.53)

@@ -2,8 +2,8 @@ package com.automationexercise.tests.Tests;
 
 import com.automationexercise.DriverManager.DriverFactory;
 import com.automationexercise.DriverManager.DriverManager;
-import com.automationexercise.Pages.P01_HomePage;
-import com.automationexercise.Pages.P02_SearchProductPage;
+import com.automationexercise.Pages.P02_HomePage;
+import com.automationexercise.Pages.P03_SearchProductPage;
 import com.automationexercise.Utilities.DataUtils;
 import com.automationexercise.Utilities.Utility;
 import org.testng.annotations.AfterMethod;
@@ -13,7 +13,7 @@ import org.testng.asserts.SoftAssert;
 
 import static com.automationexercise.DriverManager.DriverManager.getDriver;
 
-public class SearchProductTests {
+public class TC09_SearchProductTest {
     SoftAssert soft = new SoftAssert();
 
     /**
@@ -31,21 +31,21 @@ public class SearchProductTests {
     @Test
     public void userSearchForProduct() {
         // navigate to the products page
-        new P01_HomePage(getDriver()).pressProductsButton();
-        new P01_HomePage(getDriver()).ADS();
+        new P02_HomePage(getDriver()).pressProductsButton();
+        new P02_HomePage(getDriver()).ADS();
 
         // verify that the user is navigated to the all products page
 
-        soft.assertTrue(new P02_SearchProductPage(getDriver()).VerifyUserNavigatedToAllProductsPage());
+        soft.assertTrue(new P03_SearchProductPage(getDriver()).VerifyUserNavigatedToAllProductsPage());
 
         // search for a product
-        new P02_SearchProductPage(getDriver()).EnterProduct("T-shirt").PressSearchButton();
+        new P03_SearchProductPage(getDriver()).EnterProduct("T-shirt").PressSearchButton();
 
         // verify that the searched products section is visible
-        soft.assertTrue(new P02_SearchProductPage(getDriver()).VerifySearchedProductsSectionVisible());
+        soft.assertTrue(new P03_SearchProductPage(getDriver()).VerifySearchedProductsSectionVisible());
 
         // verify that all the products related to the search are visible
-        soft.assertEquals(new P02_SearchProductPage(getDriver()).VerifyAllProductRelatedToSearchVisible(), 3);
+        soft.assertEquals(new P03_SearchProductPage(getDriver()).VerifyAllProductRelatedToSearchVisible(), 3);
         soft.assertAll();
     }
 

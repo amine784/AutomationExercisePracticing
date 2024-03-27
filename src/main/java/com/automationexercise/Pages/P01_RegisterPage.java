@@ -12,11 +12,11 @@ public class P01_RegisterPage {
     //click button in the header
     private final By signupLoginButton = By.cssSelector("a[href='/login']");
     //input feald name && email then signup button to redirect to the form page
-    private final By signUpName = By.xpath("//input[@data-qa='signup-name']");
-    private final By signUpEmail = By.xpath("//input[@data-qa='signup-email']");
-    private final By signUpButton = By.xpath("//button[@data-qa='signup-button']");
-    private final By errorMsg = By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/p");
-    private final By newUserSignupMessage = By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/h2");
+    private final By signUpName = By.cssSelector("input[data-qa=\"signup-name\"]");
+    private final By signUpEmail = By.cssSelector("input[data-qa=\"signup-email\"]");
+    private final By signUpButton = By.cssSelector("button[data-qa=\"signup-button\"]");
+    private final By errorMsg = By.cssSelector("[action=\"/signup\"] p");
+    private final By newUserSignupMessage = By.cssSelector(".signup-form h2");
     //radio button for selecting gender
     private final By genderMrRadioButton = By.id("id_gender1");
     private final By genderMrsRadioButton = By.id("id_gender2");

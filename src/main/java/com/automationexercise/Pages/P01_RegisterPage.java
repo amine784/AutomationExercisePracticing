@@ -141,7 +141,7 @@ public class P01_RegisterPage {
         return this;
     }
 
-    //Validations
+    //Validations error message and signupMessage with 2  new method
     public boolean verifyThatErrorMessageAppears(String expectedText) {
         return verifyEquals(errorMsg, expectedText);
 
